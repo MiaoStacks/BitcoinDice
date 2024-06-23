@@ -1,21 +1,22 @@
 <template>
-  <t-config-provider :global-config="{ classPrefix: 't' }">
-    <t-space direction="vertical" style="width: 100%; text-align: center">
-      Bitcoin dice
-    </t-space>
-  </t-config-provider>
+  <div id="app">
+    <MenuBar menu="none" redirectFlag=0></MenuBar>
+    <router-view/>
+  </div>
 </template>
 
-<script setup lang="ts">
-import {
-  AddIcon,
-  CloudUploadIcon,
-  DiscountIcon,
-  CloudDownloadIcon,
-  JumpIcon
-} from "tdesign-icons-vue-next";
-
+<script>
+export default {
+  name: 'App',
+  components: {
+  },
+}
 </script>
 
 <style>
+#app {
+  font-family: 'Barlow', 'Arial', sans-serif;
+  font-size: 16px;
+  margin: 0;
+}
 </style>
