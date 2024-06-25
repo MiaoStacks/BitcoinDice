@@ -7,7 +7,7 @@
         <span id='title'>Bitcoin dice</span>
       </el-col>
       <el-col :span="6">
-        <router-link class='menu' to="/" replace>Lottery</router-link>
+        <router-link class='menu' to="/prize1/bet" replace>Lottery</router-link>
         <router-link class='menu' to="/about" replace>About</router-link>
         <el-button type="primary" round @click="onClickLoginIn" v-if='!bSignedIn'>Sign in</el-button>
         <el-button type="info" round @click="onClickLoginOut" v-if='bSignedIn'>Sign out</el-button>
