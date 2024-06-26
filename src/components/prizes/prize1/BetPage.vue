@@ -126,10 +126,11 @@
         <div style="margin-bottom:8px">Input latest bitcoin block height:</div>
         <el-input placeholder="Latest block height" v-model="latestBtcHeight" maxlength="8" size="large" clearable></el-input>
         <div id="btcHeightTip">
-          View latest block height
-          <a class="mylink" href="https://mempool.space/testnet/blocks" target="_blank">here</a>
+          View latest bitcoin block height
+          <a class="mylink" href="https://explorer.hiro.so/blocks?chain=testnet" target="_blank">here</a>
+          <!-- <a class="mylink" href="https://mempool.space/testnet/blocks" target="_blank">here</a>
           or
-          <a class="mylink" href="https://blockstream.info/testnet" target="_blank">here</a>
+          <a class="mylink" href="https://blockstream.info/testnet" target="_blank">here</a> -->
           , wrong number will lead to transaction fail.
         </div>
       </div>
@@ -501,7 +502,7 @@ export default {
     },
     onSelectBtcHeightOk() {
       let btcHeight = parseInt(this.latestBtcHeight)
-      if (!btcHeight || btcHeight <= 791000) {
+      if (!btcHeight || btcHeight <= 1) {
         tipError(this, 'Invalid bitcoin block height')
         return
       }
